@@ -23,12 +23,9 @@ public class FilePipeline implements Pipeline {
         StringBuilder sb = new StringBuilder();
         uas.forEach(s->sb.append(s).append("\r\n"));
 
-        String fileName = "/ua/"+resultItems.get("fileName")+".txt";
+        String fileName = resultItems.get("fileName")+".txt";
 
-
-        FileSystem fileSystem = Vertx.vertx().fileSystem();
-
-        fileSystem.writeFile(fileName, Buffer.buffer(sb.toString()), result -> {
+        Vertx.vertx().fileSystem().writeFile(fileName, Buffer.buffer(sb.toString()), result -> {
 
             if(result.succeeded()) {
 
