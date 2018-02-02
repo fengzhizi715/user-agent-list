@@ -13,6 +13,12 @@ public class Main {
                 .name("tony")
                 .url("http://www.useragentstring.com/pages/useragentstring.php?name=Googlebot")
                 .url("http://www.useragentstring.com/pages/useragentstring.php?name=Baiduspider")
+                .url("http://www.useragentstring.com/pages/useragentstring.php?name=Chrome")
+                .url("http://www.useragentstring.com/pages/useragentstring.php?name=Firefox")
+                .url("http://www.useragentstring.com/pages/useragentstring.php?name=Mozilla")
+                .url("http://www.useragentstring.com/pages/useragentstring.php?name=Opera")
+                .url("http://www.useragentstring.com/pages/useragentstring.php?name=Safari")
+                .url("http://www.useragentstring.com/pages/useragentstring.php?name=Edge")
                 .parser(new UAParser())
                 .pipeline(new FilePipeline())
                 .run();
