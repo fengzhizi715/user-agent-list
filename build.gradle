@@ -15,4 +15,6 @@ dependencies {
 
     implementation 'com.cv4j.netdiscovery:netdiscovery-core:0.0.6.1'
     implementation 'com.cv4j.netdiscovery:netdiscovery-extra:0.0.6.1'
+
+    implementation 'io.vertx:vertx-core:3.5.0'
 }
