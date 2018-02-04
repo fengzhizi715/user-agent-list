@@ -3,7 +3,9 @@ package com.cv4j.ualist;
 import com.cv4j.netdiscovery.core.domain.Page;
 import com.cv4j.netdiscovery.core.domain.ResultItems;
 import com.cv4j.netdiscovery.core.parser.Parser;
+import com.cv4j.netdiscovery.core.utils.URLParser;
 
+import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -21,13 +23,18 @@ public class UAParser implements Parser {
 
         resultItems.put("ua",page.getHtml().xpath("//div[@id='liste']/ul/li/a/text()").all());
 
-        URL url = null;
+        URLParser parser = null;
+
         try {
-            url = new URL( page.getUrl());
+            parser = new URLParser(page.getUrl());
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
 
-        resultItems.put("fileName",url.getQuery().substring(5));
+        try {
+            resultItems.put("fileName",parser.getParam("name"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
     }
 }
