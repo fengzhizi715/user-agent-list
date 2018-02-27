@@ -2,12 +2,9 @@ package com.cv4j.ualist;
 
 import com.cv4j.netdiscovery.core.domain.ResultItems;
 import com.cv4j.netdiscovery.core.pipeline.Pipeline;
-import io.vertx.core.Handler;
-import io.vertx.core.Vertx;
+import com.cv4j.netdiscovery.core.utils.VertxUtils;
 import io.vertx.core.buffer.Buffer;
-import io.vertx.core.file.FileSystem;
 
-import java.io.File;
 import java.util.List;
 
 /**
@@ -25,7 +22,7 @@ public class FilePipeline implements Pipeline {
 
         String fileName = resultItems.get("fileName")+".txt";
 
-        Vertx.vertx().fileSystem().writeFile(fileName, Buffer.buffer(sb.toString()), result -> {
+        VertxUtils.vertx.fileSystem().writeFile(fileName, Buffer.buffer(sb.toString()), result -> {
 
             if(result.succeeded()) {
 
