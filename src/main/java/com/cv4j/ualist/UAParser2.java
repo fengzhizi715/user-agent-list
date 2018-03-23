@@ -21,13 +21,7 @@ public class UAParser2 extends AnnotationParser {
     public void process(Page page) {
         super.process(page);
 
-        URLParser parser = null;
-
-        try {
-            parser = new URLParser(page.getUrl());
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
+        URLParser parser = page.getRequest().getUrlParser();
 
         try {
             resultItems.put("fileName",parser.getParam("name"));
