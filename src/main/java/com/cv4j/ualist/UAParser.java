@@ -7,9 +7,6 @@ import com.cv4j.netdiscovery.core.utils.URLParser;
 
 import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
 
 /**
  * Created by tony on 2018/2/2.
