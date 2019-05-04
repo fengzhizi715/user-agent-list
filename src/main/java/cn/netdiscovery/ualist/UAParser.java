@@ -1,9 +1,10 @@
-package com.cv4j.ualist;
+package cn.netdiscovery.ualist;
 
-import com.cv4j.netdiscovery.core.domain.Page;
-import com.cv4j.netdiscovery.core.domain.ResultItems;
-import com.cv4j.netdiscovery.core.parser.Parser;
-import com.cv4j.netdiscovery.core.utils.URLParser;
+
+import cn.netdiscovery.core.domain.Page;
+import cn.netdiscovery.core.domain.ResultItems;
+import cn.netdiscovery.core.parser.Parser;
+import cn.netdiscovery.core.utils.URLParser;
 
 import java.io.UnsupportedEncodingException;
 

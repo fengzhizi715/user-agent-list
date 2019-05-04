@@ -1,6 +1,6 @@
-package com.cv4j.ualist;
+package cn.netdiscovery.ualist;
 
-import com.cv4j.netdiscovery.core.Spider;
+import cn.netdiscovery.core.Spider;
 
 /**
  * Created by tony on 2018/2/2.

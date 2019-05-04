@@ -1,8 +1,8 @@
-package com.cv4j.ualist;
+package cn.netdiscovery.ualist;
 
-import com.cv4j.netdiscovery.core.domain.ResultItems;
-import com.cv4j.netdiscovery.core.pipeline.Pipeline;
-import com.cv4j.netdiscovery.core.utils.VertxUtils;
+import cn.netdiscovery.core.domain.ResultItems;
+import cn.netdiscovery.core.pipeline.Pipeline;
+import cn.netdiscovery.core.utils.VertxUtils;
 import io.vertx.core.buffer.Buffer;
 
 import java.util.List;
@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by tony on 2018/2/2.
  */
-public class FilePipeline implements Pipeline {
+public class FilePipeline extends Pipeline {
 
     @Override
     public void process(ResultItems resultItems) {
@@ -22,7 +22,7 @@ public class FilePipeline implements Pipeline {
 
         String fileName = resultItems.get("fileName")+".txt";
 
-        VertxUtils.vertx.fileSystem().writeFile(fileName, Buffer.buffer(sb.toString()), result -> {
+        VertxUtils.getVertx().fileSystem().writeFile(fileName, Buffer.buffer(sb.toString()), result -> {
 
             if(result.succeeded()) {
 

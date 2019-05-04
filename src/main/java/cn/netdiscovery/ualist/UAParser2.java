@@ -1,12 +1,11 @@
-package com.cv4j.ualist;
+package cn.netdiscovery.ualist;
 
-import com.cv4j.netdiscovery.core.domain.Page;
-import com.cv4j.netdiscovery.core.parser.AnnotationParser;
-import com.cv4j.netdiscovery.core.parser.annotation.ExtractBy;
-import com.cv4j.netdiscovery.core.utils.URLParser;
+import cn.netdiscovery.core.domain.Page;
+import cn.netdiscovery.core.parser.AnnotationParser;
+import cn.netdiscovery.core.parser.annotation.ExtractBy;
+import cn.netdiscovery.core.utils.URLParser;
 
 import java.io.UnsupportedEncodingException;
-import java.net.MalformedURLException;
 import java.util.List;
 
 /**

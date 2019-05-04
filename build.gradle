@@ -1,4 +1,8 @@
-group 'com.cv4j.ualist'
+plugins {
+    id 'java'
+}
+
+group 'cn.netdiscovery.ualist'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
@@ -6,13 +10,15 @@ apply plugin: 'java'
 sourceCompatibility = 1.8
 
 repositories {
-    jcenter()
+    jcenter() {
+        url 'https://dl.bintray.com/fengzhizi715/maven'
+    }
     mavenCentral()
 }
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 
-    implementation 'com.cv4j.netdiscovery:netdiscovery-core:0.2.5'
-    implementation 'com.cv4j.netdiscovery:netdiscovery-extra:0.2.5'
+    implementation 'cn.netdiscovery:netdiscovery-core:1.0.0'
+    implementation "io.reactivex.rxjava2:rxjava:2.2.8"
 }
