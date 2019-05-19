@@ -2,7 +2,7 @@ package cn.netdiscovery.ualist;
 
 import cn.netdiscovery.core.domain.ResultItems;
 import cn.netdiscovery.core.pipeline.Pipeline;
-import cn.netdiscovery.core.utils.VertxUtils;
+import cn.netdiscovery.core.vertx.VertxUtils;
 import io.vertx.core.buffer.Buffer;
 
 import java.util.List;
