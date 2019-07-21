@@ -19,6 +19,7 @@ public class Main {
                 .url("http://www.useragentstring.com/pages/useragentstring.php?name=Opera")
                 .url("http://www.useragentstring.com/pages/useragentstring.php?name=Safari")
                 .url("http://www.useragentstring.com/pages/useragentstring.php?name=Edge")
+                .url("http://www.useragentstring.com/pages/useragentstring.php?name=Android+Webkit+Browser")
                 .parser(new UAParser())
                 .pipeline(new FilePipeline())
                 .run();
