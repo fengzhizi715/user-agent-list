@@ -4,7 +4,9 @@ import cn.netdiscovery.core.domain.ResultItems;
 import cn.netdiscovery.core.pipeline.Pipeline;
 import cn.netdiscovery.core.vertx.VertxUtils;
 import io.vertx.core.buffer.Buffer;
+import io.vertx.core.file.FileSystem;
 
+import java.io.File;
 import java.util.List;
 
 /**

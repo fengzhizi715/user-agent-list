@@ -4,7 +4,6 @@ package cn.netdiscovery.ualist;
 import cn.netdiscovery.core.domain.Page;
 import cn.netdiscovery.core.domain.ResultItems;
 import cn.netdiscovery.core.parser.Parser;
-import cn.netdiscovery.core.utils.URLParser;
 
 import java.io.UnsupportedEncodingException;
 
@@ -18,12 +17,10 @@ public class UAParser implements Parser {
 
         ResultItems resultItems = page.getResultItems();
 
-        resultItems.put("ua",page.getHtml().xpath("//div[@id='liste']/ul/li/a/text()").all());
-
-        URLParser parser = page.getRequest().getUrlParser();
+        resultItems.put("ua", page.getHtml().xpath("//div[@id='liste']/ul/li/a/text()").all());   // 获取 ua 的内容
 
         try {
-            resultItems.put("fileName",parser.getParam("name"));
+            resultItems.put("fileName", page.getRequest().getUrlParser().getParam("name")); // 获取文件的名称
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
