@@ -2,7 +2,7 @@ package cn.netdiscovery.ualist;
 
 import cn.netdiscovery.core.domain.ResultItems;
 import cn.netdiscovery.core.pipeline.Pipeline;
-import cn.netdiscovery.core.vertx.VertxUtils;
+import cn.netdiscovery.core.vertx.VertxManager;
 import io.vertx.core.buffer.Buffer;
 
 import java.util.List;
@@ -22,7 +22,7 @@ public class FilePipeline extends Pipeline {
 
         String fileName = resultItems.get("fileName")+".txt";
 
-        VertxUtils.getVertx().fileSystem().writeFile(fileName, Buffer.buffer(sb.toString()), result -> {
+        VertxManager.getVertx().fileSystem().writeFile(fileName, Buffer.buffer(sb.toString()), result -> {
 
             if(result.succeeded()) {
 
